@@ -1,87 +1,743 @@
 {
-    "[python]": {
-        "editor.bracketPairColorization.enabled": false,
-        "editor.guides.bracketPairs": false,
-        "editor.tabSize": 4
+  "editor.fontSize": 19,
+  "editor.fontFamily": "JetBrainsMonoNL-ExtraLight, Menlo, Monaco, 'Courier New', monospace, Meslo, MesloLGS NF",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "workbench.externalBrowser": "chrome",
+  "git.autofetch": true,
+  "editor.minimap.enabled": false,
+  //"terminal.external.osxExec": "iTerm.app",
+  //"terminal.explorerKind": "external",
+  "code-runner.runInTerminal": true,
+  "terminal.explorerKind": "external",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.sideBar.location": "right",
+  // "workbench.statusBar.visible": false,  // Hides the bottom status bar
+  // "editor.folding": false,               // Hides the code folding indicators
+  "editor.renderLineHighlight": "none", // Disables the highlight of the active line
+  "editor.renderWhitespace": "none", // Hides whitespace markers
+  "editor.scrollBeyondLastLine": false, // Prevents unnecessary scrolling
+  "explorer.openEditors.visible": 1, // Removes the "Open Editors" section
+  "editor.stickyScroll.enabled": false, // Removes sticky scroll on main window
+  "editor.scrollbar.horizontal": "hidden", // Hide horizontal scrollbar
+  "editor.scrollbar.vertical": "hidden", // Hide vertical scrollbar
+  // "editor.overviewRulerBorder": false,
+  "editor.scrollbar.useShadows": false, // Disables any shadow effects on the scrollbar
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.editor.showTabs": "single",
+  "workbench.statusBar.visible": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "color-highlight.markRuler": false,
+  "editor.glyphMargin": true,
+  "editor.showFoldingControls": "mouseover",
+  "window.menuBarVisibility": "toggle",
+  "workbench.layoutControl.type": "both",
+
+  // Add custom styles and scripts below
+  "vscode_custom_css.imports": [
+    "file:///Users/emmanuelvernet/code/EmmanuelVernet/vscode-custom-styles.css",
+    "file:///Users/emmanuelvernet/code/EmmanuelVernet/vscode-custom-styles.js",
+    "file:///Users/emmanuelvernet/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+  "editor.tokenColorCustomizations": {
+    "[One Dark Pro]": {
+      // Or specific variant you're using
+      "textMateRules": [
+        {
+          "scope": "variable.other.readwrite.instance.ruby",
+          "settings": {
+            "foreground": "#f55293e3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          "scope": "entity.name.function.member",
+          "settings": {
+            "foreground": "#00C896" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        }
+      ]
     },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.detectIndentation": false,
-    "editor.fontSize": 14,
-    "editor.guides.bracketPairs": true,
-    "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderControlCharacters": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.showFoldingControls": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.tabSize": 2,
+    "[Tokyo Storm Gogh]": {
+      // Or specific variant you're using
+      "textMateRules": [
+        {
+          "scope": "variable.other.readwrite.instance.ruby",
+          "settings": {
+            "foreground": "#f55293e3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          "scope": "entity.name.function.member",
+          "settings": {
+            "foreground": "#00C896" // Replace with a
+            //  color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        }
+      ]
+    },
+    "[Tokyo Night Storm Frameless]": {
+      // Or specific variant you're using
+      "textMateRules": [
+        {
+          "scope": "variable.other.readwrite.instance.ruby",
+          "settings": {
+            "foreground": "#f877abe3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          // @ instance var sign
+          "scope": "variable.other punctuation.definition.variable",
+          "settings": {
+            "foreground": "#f877abe3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          // var color
+          "scope": "variable.other.readwrite",
+          "settings": {
+            "foreground": "#f877abe3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          // var color
+          "scope": "variable.ruby",
+          "settings": {
+            "foreground": "#f877abe3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          "scope": "entity.name.function.member",
+          "settings": {
+            "foreground": "#00C896" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        }
+      ]
+    },
+    "[Catppuccin Mocha]": {
+      // Or specific variant you're using
+      "textMateRules": [
+        {
+          "scope": "variable.other.readwrite.instance.ruby",
+          "settings": {
+            "foreground": "#f55293e3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#FFE66D" "foreground": "#00E8C6" "foreground": "#C2ADFC"
+          }
+        },
+        {
+          "scope": "punctuation.definition.variable",
+          "settings": {
+            "foreground": "#f55293e3" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        },
+        {
+          "scope": "entity.name.function.member",
+          "settings": {
+            "foreground": "#00C896" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        },
+        {
+          "scope": "variable.other.block.ruby",
+          "settings": {
+            "foreground": "#eba0ac" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        },
+        {
+          "scope": "variable.ruby",
+          "settings": {
+            "foreground": "#eba0ac" // Replace with a color like "#c678dd" (purple) or "#56b6c2" (cyan)
+            // "foreground": "#7AC3F3"
+          }
+        },
+        {
+          "scope": "variable.other.readwrite",
+          "settings": { "foreground": "#eba0ac", "fontStyle": "italic" }
+        }
+      ]
+    }
+  },
+
+  "workbench.colorCustomizations": {
+    "[One Dark Pro]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2D4366", // removes shadow
+      "sideBar.border": "#2D4366",
+      "panel.border": "#2D4366",
+      "sideBarSectionHeader.border": "#2D4366",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2D4366",
+      "editorGroupHeader.tabsBorder": "#2D4366",
+      "editorOverviewRuler.border": "#2D4366",
+      "activityBar.border": "#2D4366",
+      "statusBar.border": "#2D4366",
+      "sideBar.background": "#2D4366",
+      "editor.background": "#2D4366", // #2D4366 #2F3C55 #211F35 #2D3E56  #2f3e5a #324065 #2e3d5e #293a60 #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #242B4A #35476b #293560 #1D3461 #2b3858 #2B385D #29435f
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2D4366",
+      "statusBar.background": "#2D4366",
+      "titleBar.activeBackground": "#2D4366",
+      "editorGroupHeader.tabsBackground": "#2D4366",
+      "tab.activeBackground": "#2D4366",
+      "tab.inactiveBackground": "#2D4366",
+      "tab.unfocusedActiveBackground": "#2D4366",
+      "tab.unfocusedInactiveBackground": "#2D4366",
+      "titleBar.inactiveBackground": "#2D4366",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2D4366",
+      "tab.activeBorderTop": "#2D4366",
+      "tab.unfocusedActiveBorder": "#2D4366",
+      "tab.border": "#2D4366",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Catppuccin Mocha]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2D4366", // removes shadow
+      "sideBar.border": "#2D4366",
+      "panel.border": "#2D4366",
+      "sideBarSectionHeader.border": "#2D4366",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2D4366",
+      "editorGroupHeader.tabsBorder": "#2D4366",
+      "editorOverviewRuler.border": "#2D4366",
+      "editorOverviewRuler.background": "#2D4366", // Background of the overview ruler
+      "editorOverviewRuler.modifiedForeground": "#2D4366", // Modified lines
+      "editorOverviewRuler.addedForeground": "#2D4366", // Added lines
+      "editorOverviewRuler.deletedForeground": "#2D4366", // Deleted lines
+      "editorOverviewRuler.errorForeground": "#2D4366", // Error markers
+      "editorOverviewRuler.warningForeground": "#2D4366", // Warning markers
+      "activityBar.border": "#2D4366",
+      "statusBar.border": "#2D4366",
+      "sideBar.background": "#2D4366",
+      "editor.background": "#2D4366", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.lineHighlightBackground": "#2D4366", // Background of the current line
+      "editorGutter.background": "#2D4366", // Gutter background
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2D4366",
+      "statusBar.background": "#2D4366",
+      "titleBar.activeBackground": "#2D4366",
+      "editorGroupHeader.tabsBackground": "#2D4366",
+      "tab.activeBackground": "#2D4366",
+      "tab.inactiveBackground": "#2D4366",
+      "tab.unfocusedActiveBackground": "#2D4366",
+      "tab.unfocusedInactiveBackground": "#2D4366",
+      "titleBar.inactiveBackground": "#2D4366",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2D4366",
+      "tab.activeBorderTop": "#2D4366",
+      "tab.unfocusedActiveBorder": "#2D4366",
+      "tab.border": "#2D4366",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Kitty VSCode Theme]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2D4366", // removes shadow
+      "sideBar.border": "#2D4366",
+      "panel.border": "#2D4366",
+      "sideBarSectionHeader.border": "#2D4366",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2D4366",
+      "editorGroupHeader.tabsBorder": "#2D4366",
+      "editorOverviewRuler.border": "#2D4366",
+      "activityBar.border": "#2D4366",
+      "statusBar.border": "#2D4366",
+      "sideBar.background": "#2D4366",
+      "editor.background": "#2D4366", // #2F3C55 #211F35 #2D3E56 #2D4366 #2f3e5a #324065 #2e3d5e #293a60 #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #242B4A #35476b #293560 #1D3461 #2b3858 #2B385D
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2D4366",
+      "statusBar.background": "#2D4366",
+      "titleBar.activeBackground": "#2D4366",
+      "editorGroupHeader.tabsBackground": "#2D4366",
+      "tab.activeBackground": "#2D4366",
+      "tab.inactiveBackground": "#2D4366",
+      "tab.unfocusedActiveBackground": "#2D4366",
+      "tab.unfocusedInactiveBackground": "#2D4366",
+      "titleBar.inactiveBackground": "#2D4366",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2D4366",
+      "tab.activeBorderTop": "#2D4366",
+      "tab.unfocusedActiveBorder": "#2D4366",
+      "tab.border": "#2D4366",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Atom One Dark]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2e3d5e", // removes shadow
+      "sideBar.border": "#2e3d5e",
+      "panel.border": "#2e3d5e",
+      "sideBarSectionHeader.border": "#2e3d5e",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2e3d5e",
+      "editorGroupHeader.tabsBorder": "#2e3d5e",
+      "editorOverviewRuler.border": "#2e3d5e",
+      "activityBar.border": "#2e3d5e",
+      "statusBar.border": "#2e3d5e",
+      "sideBar.background": "#2e3d5e",
+      "editor.background": "#2e3d5e", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2e3d5e",
+      "statusBar.background": "#2e3d5e",
+      "titleBar.activeBackground": "#2e3d5e",
+      "editorGroupHeader.tabsBackground": "#2e3d5e",
+      "tab.activeBackground": "#2e3d5e",
+      "tab.inactiveBackground": "#2e3d5e",
+      "tab.unfocusedActiveBackground": "#2e3d5e",
+      "tab.unfocusedInactiveBackground": "#2e3d5e",
+      "titleBar.inactiveBackground": "#2e3d5e",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2e3d5e",
+      "tab.activeBorderTop": "#2e3d5e",
+      "tab.unfocusedActiveBorder": "#2e3d5e",
+      "tab.border": "#2e3d5e",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Vim Deep Dark]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2e3d5e", // removes shadow
+      "sideBar.border": "#2e3d5e",
+      "panel.border": "#2e3d5e",
+      "sideBarSectionHeader.border": "#2e3d5e",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2e3d5e",
+      "editorGroupHeader.tabsBorder": "#2e3d5e",
+      "editorOverviewRuler.border": "#2e3d5e",
+      "activityBar.border": "#2e3d5e",
+      "statusBar.border": "#2e3d5e",
+      "sideBar.background": "#2e3d5e",
+      "editor.background": "#2e3d5e", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2e3d5e",
+      "statusBar.background": "#2e3d5e",
+      "titleBar.activeBackground": "#2e3d5e",
+      "editorGroupHeader.tabsBackground": "#2e3d5e",
+      "tab.activeBackground": "#2e3d5e",
+      "tab.inactiveBackground": "#2e3d5e",
+      "tab.unfocusedActiveBackground": "#2e3d5e",
+      "tab.unfocusedInactiveBackground": "#2e3d5e",
+      "titleBar.inactiveBackground": "#2e3d5e",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2e3d5e",
+      "tab.activeBorderTop": "#2e3d5e",
+      "tab.unfocusedActiveBorder": "#2e3d5e",
+      "tab.border": "#2e3d5e",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Tomorrow Theme]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2e3d5e", // removes shadow
+      "sideBar.border": "#2e3d5e",
+      "panel.border": "#2e3d5e",
+      "sideBarSectionHeader.border": "#2e3d5e",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2e3d5e",
+      "editorGroupHeader.tabsBorder": "#2e3d5e",
+      "editorOverviewRuler.border": "#2e3d5e",
+      "activityBar.border": "#2e3d5e",
+      "statusBar.border": "#2e3d5e",
+      "sideBar.background": "#2e3d5e",
+      "editor.background": "#2e3d5e", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2e3d5e",
+      "statusBar.background": "#2e3d5e",
+      "titleBar.activeBackground": "#2e3d5e",
+      "editorGroupHeader.tabsBackground": "#2e3d5e",
+      "tab.activeBackground": "#2e3d5e",
+      "tab.inactiveBackground": "#2e3d5e",
+      "tab.unfocusedActiveBackground": "#2e3d5e",
+      "tab.unfocusedInactiveBackground": "#2e3d5e",
+      "titleBar.inactiveBackground": "#2e3d5e",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2e3d5e",
+      "tab.activeBorderTop": "#2e3d5e",
+      "tab.unfocusedActiveBorder": "#2e3d5e",
+      "tab.border": "#2e3d5e",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Tokyo Storm Gogh]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#24283B", // removes shadow
+      "sideBar.border": "#24283B",
+      "panel.border": "#24283B",
+      "sideBarSectionHeader.border": "#24283B",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#24283B",
+      "editorGroupHeader.tabsBorder": "#24283B",
+      "editorOverviewRuler.border": "#24283B",
+      "activityBar.border": "#24283B",
+      "statusBar.border": "#24283B",
+      "sideBar.background": "#24283B",
+      "editor.background": "#24283B", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#24283B",
+      "statusBar.background": "#24283B",
+      "titleBar.activeBackground": "#24283B",
+      "editorGroupHeader.tabsBackground": "#24283B",
+      "tab.activeBackground": "#24283B",
+      "tab.inactiveBackground": "#24283B",
+      "tab.unfocusedActiveBackground": "#24283B",
+      "tab.unfocusedInactiveBackground": "#24283B",
+      "titleBar.inactiveBackground": "#24283B",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#24283B",
+      "tab.activeBorderTop": "#24283B",
+      "tab.unfocusedActiveBorder": "#24283B",
+      "tab.border": "#24283B",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[Tokyo Night Storm Frameless]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#24283B", // removes shadow
+      "sideBar.border": "#24283B",
+      "panel.border": "#24283B",
+      "sideBarSectionHeader.border": "#24283B",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#24283B",
+      "editorGroupHeader.tabsBorder": "#24283B",
+      "editorOverviewRuler.border": "#24283B",
+      "activityBar.border": "#24283B",
+      "statusBar.border": "#24283B",
+      "sideBar.background": "#24283B",
+      "editor.background": "#24283B", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#24283B",
+      "statusBar.background": "#24283B",
+      "titleBar.activeBackground": "#24283B",
+      "editorGroupHeader.tabsBackground": "#24283B",
+      "tab.activeBackground": "#24283B",
+      "tab.inactiveBackground": "#24283B",
+      "tab.unfocusedActiveBackground": "#24283B",
+      "tab.unfocusedInactiveBackground": "#24283B",
+      "titleBar.inactiveBackground": "#24283B",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#24283B",
+      "tab.activeBorderTop": "#24283B",
+      "tab.unfocusedActiveBorder": "#24283B",
+      "tab.border": "#24283B",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "[One Candy]": {
+      "editorIndentGuide.background1": "#6a6767", // couleur plus claire pour les lignes d'indentation
+      "editorIndentGuide.activeBackground1": "#6a6767", // couleur pour la ligne active, optionnel
+      "editor.foreground": "#b1b8d5", // Muted light color for commas, colons etc
+      "editorLineNumber.foreground": "#73778d",
+      "editorLineNumber.activeForeground": "#b1b8d5",
+      "editorWhitespace.foreground": "#4C5160",
+      "statusBar.foreground": "#b9bdca",
+      "sideBar.foreground": "#C3BAC6",
+      "activityBar.foreground": "#E0DEF4",
+      // background colors below
+      "scrollbar.shadow": "#2e3d5e", // removes shadow
+      "sideBar.border": "#2e3d5e",
+      "panel.border": "#2e3d5e",
+      "sideBarSectionHeader.border": "#2e3d5e",
+      "editorGroup.border": "#2f4167", // middle window separator
+      "editorGroupHeader.border": "#2e3d5e",
+      "editorGroupHeader.tabsBorder": "#2e3d5e",
+      "editorOverviewRuler.border": "#2e3d5e",
+      "activityBar.border": "#2e3d5e",
+      "statusBar.border": "#2e3d5e",
+      "sideBar.background": "#2e3d5e",
+      "editor.background": "#2e3d5e", // #1F2541 #252C48 #1A264C #1C234D #182747 #253238 #172545 #303446 (catppuccin) #32214C #2F3C55 #211F35 #242B4A #2D3E56 #2D4366 #2f3e5a #35476b #293560 #1D3461 #324065 #2e3d5e #2b3858 #293a60
+      "editor.selectionBackground": "#676e93", // Lighten the selected text background color
+      "sideBarSectionHeader.background": "#2e3d5e",
+      "statusBar.background": "#2e3d5e",
+      "titleBar.activeBackground": "#2e3d5e",
+      "editorGroupHeader.tabsBackground": "#2e3d5e",
+      "tab.activeBackground": "#2e3d5e",
+      "tab.inactiveBackground": "#2e3d5e",
+      "tab.unfocusedActiveBackground": "#2e3d5e",
+      "tab.unfocusedInactiveBackground": "#2e3d5e",
+      "titleBar.inactiveBackground": "#2e3d5e",
+      "titleBar.activeForeground": "#bbbbbb",
+      "titleBar.inactiveForeground": "#bbbbbb7d",
+      "tab.activeBorder": "#2e3d5e",
+      "tab.activeBorderTop": "#2e3d5e",
+      "tab.unfocusedActiveBorder": "#2e3d5e",
+      "tab.border": "#2e3d5e",
+      "tab.activeForeground": "#d0cfcf",
+      "tab.inactiveForeground": "#bbbbbb7d",
+      "tab.hoverBackground": "#5c6387", // Slightly lighter than #303446
+      "tab.unfocusedHoverBackground": "#5c6387", // Ensures consistency when unfocused
+      "list.hoverBackground": "#5c6386",
+      "list.hoverForeground": "#D9E0EE",
+      "list.activeSelectionBackground": "#00000000", // #4e536c Removes background color of the selected item
+      "list.inactiveSelectionBackground": "#00000000", // #4a4f66 Removes background color when the item is inactive
+      "list.focusBackground": "#00000000", // No background for focused item
+      "list.activeSelectionForeground": "#c861f4", // Text color for selected item
+      "list.inactiveSelectionForeground": "#c861f4", // "#4ca8b5" Text color when the item is inactive
+      "quickInput.foreground": "#FFFFFF" // Text color inside the input box
+    },
+    "terminal.background": "#00000000"
+  },
+  "window.zoomLevel": 0,
+  "editor.cursorBlinking": "blink",
+  "editor.cursorStyle": "line",
+  "editor.lineHeight": 2,
+  "editor.codeLens": true,
+  // "catppuccin-icons.hidesExplorerArrows": true,
+  // "material-icon-theme.hidesExplorerArrows": true,
+  "breadcrumbs.enabled": false,
+  // "workbench.statusBar.visible": false,
+  /*
     "emmet.includeLanguages": {
-        "erb": "html"
+        "erb": "html",         // Tell Emmet to treat .erb files as HTML for autocompletion
+        "html.erb": "html"     // Ensure Emmet also applies HTML completions in .html.erb files
     },
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true,
-    "explorer.confirmDelete": false,
-    "files.exclude": {
-        "__pycache__": true,
-        "_site": true,
-        ".asset-cache": true,
-        ".bundle": true,
-        ".ipynb_checkpoints": true,
-        ".pytest_cache": true,
-        ".sass-cache": true,
-        ".svn": true,
-        "**/.DS_Store": true,
-        "**/.egg-info": true,
-        "**/.git": true,
-        "build": true,
-        "coverage": true,
-        "dist": true,
-        "log": true,
-        "node_modules": true,
-        "public/packs": true,
-        "tmp": true
-    },
-    "files.hotExit": "off",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-        "**/audits/**": true,
-        "**/coverage/**": true,
-        "**/log/**": true,
-        "**/node_modules/**": true,
-        "**/tmp/**": true,
-        "**/vendor/**": true
-    },
-    "git.enabled": false,
-    "notebook.diff.ignoreMetadata": true,
-    "notebook.lineNumbers": "on",
-    "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-    "python.formatting.provider": "yapf",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": false,
-    "python.linting.flake8Enabled": false,
-    "python.linting.pylintEnabled": false,
-    "python.terminal.activateEnvironment": false,
-    "ruby.lint": {
-        "rubocop": true
-    },
-    "search.exclude": {
-      // Inherits all glob patterns from the `files.exclude` setting.
-      "**/.venv": true
-    },
-    "telemetry.telemetryLevel": "off",
-    "window.restoreWindows": "none",
-    "window.newWindowDimensions": "maximized",
-    "workbench.editor.enablePreview": true,
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.settings.editor": "json",
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.panel.defaultLocation": "right",
+ */
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "sorbet.enabled": true,
+  "auto-close-tag.enableAutoCloseTag": true,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb"
+  ],
+  "html.format.templating": true,
+  "editor.defaultFormatter": "formulahendry.auto-close-tag",
+  "editor.wordWrap": "on",
+  "eslint.format.enable": true,
+  "rubyLsp.linters": [null],
+
+  // All of these settings are scoped only to the Ruby language
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
+    "editor.formatOnSave": false, // Format files automatically when saving
+    "editor.tabSize": 2, // Use 2 spaces for indentation
+    "editor.insertSpaces": false, // Use spaces and not tabs for indentation
+    "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+    "editor.formatOnType": false // Enable formatting while typing
+  },
+
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+    // "editor.formatOnSave": true
+  },
+  "files.associations": {
+    "*.html.erb": "erb" // Ensure .html.erb files keep Ruby highlighting
+  },
+  "editor.tabSize": 2,
+  "editor.stickyTabStops": true,
+  "terminal.integrated.gpuAcceleration": "off",
+  // "workbench.preferredHighContrastColorTheme": "One Dark Pro",
+  "chat.commandCenter.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "animations.Active": "Indent",
+  "animations.Command-Palette": "Fade",
+  "animations.Tabs": "None",
+  "html.format.indentInnerHtml": true,
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "Tokyo Storm Gogh",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "pgsql.serverGroups": [
+    {
+      "name": "Servers",
+      "id": "A69670F1-B68A-4D3F-9576-9C46D62B86A6",
+      "isDefault": true
+    }
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {}
 }

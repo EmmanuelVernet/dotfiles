@@ -1,3 +1,13 @@
+#source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+## ZSH 
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
@@ -70,3 +80,28 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Set path for VS code in terminal
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Set Oh My posh CLI themes
+# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/amro.omp.json)"source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# Set p10k CLI themes
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# NEOVIM
+export PATH="/path/to/neovim/directory:$PATH"
+# Added by Windsurf
+export PATH="/Users/emmanuelvernet/.codeium/windsurf/bin:$PATH"
+# EZA color scheme
+# can be found in https://github.com/eza-community/eza-themes/blob/main/README.md#installation & https://github.com/eza-community/eza?tab=readme-ov-file. Config file is in ~/.config/eza/theme.yml
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+source $(brew --prefix fzf)/shell/key-bindings.zsh
+source $(brew --prefix fzf)/shell/completion.zsh
+
+# Zed editor
